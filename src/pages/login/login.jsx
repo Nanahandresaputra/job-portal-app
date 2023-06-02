@@ -2,7 +2,7 @@ import { Box, Button, FormControl, Grid, Paper, TextField, Typography } from "@m
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getSeed } from "../../app/features/getuser/action";
 
@@ -87,7 +87,7 @@ const Login = () => {
           </FormControl>
         </form>
         <Typography component="p" m="1vh" align="center">
-          not have account? <a href="register">create here</a>
+          not have account? <Link to="/register">Create here</Link>
         </Typography>
         <Box align="center">
           <Button
